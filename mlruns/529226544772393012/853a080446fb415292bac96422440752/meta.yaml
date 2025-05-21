@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/roshinijoga/Desktop/AI chatbot/mlruns/529226544772393012/853a080446fb415292bac96422440752/artifacts
+end_time: 1747801209195
+entry_point_name: ''
+experiment_id: '529226544772393012'
+lifecycle_stage: active
+run_id: 853a080446fb415292bac96422440752
+run_name: review_20250520_212009
+run_uuid: 853a080446fb415292bac96422440752
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747801209183
+status: 3
+tags: []
+user_id: roshinijoga

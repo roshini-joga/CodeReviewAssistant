@@ -1,0 +1,146 @@
+code,language,quality_score,has_bugs,complexity,timestamp,review_status
+"
+def calculate_factorial(n):
+    if n < 0:
+        return None
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+            ",python,0.85,False,low,2025-05-20 20:11:00.025666,pending
+"
+function findDuplicates(arr) {
+    let duplicates = [];
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            if(arr[i] === arr[j]) {
+                duplicates.push(arr[i]);
+            }
+        }
+    }
+    return duplicates;
+}
+            ",javascript,0.75,True,medium,2025-05-20 20:11:00.025666,pending
+"
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+    
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+    
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException(""Division by zero"");
+        }
+        return (double) a / b;
+    }
+}
+            ",java,0.9,False,low,2025-05-20 20:11:00.025666,pending
+"
+def process_data(data):
+    try:
+        result = []
+        for item in data:
+            if item > 0:
+                result.append(item * 2)
+        return result
+    except Exception as e:
+        print(f""Error: {e}"")
+        return None
+            ",python,0.7,True,medium,2025-05-20 20:11:00.025666,pending
+"
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    
+    validateEmail() {
+        return this.email.includes('@');
+    }
+    
+    getInfo() {
+        return `${this.name} (${this.email})`;
+    }
+}
+            ",javascript,0.8,False,low,2025-05-20 20:11:00.025666,pending
+"
+def fibonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    fib = [0, 1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    return fib
+            ",python,0.95,False,medium,2025-05-20 20:11:00.025666,pending
+"
+function sortArray(arr) {
+    return arr.sort((a, b) => a - b);
+}
+
+function findMedian(arr) {
+    const sorted = sortArray(arr);
+    const mid = Math.floor(sorted.length / 2);
+    return sorted.length % 2 === 0 
+        ? (sorted[mid-1] + sorted[mid]) / 2 
+        : sorted[mid];
+}
+            ",javascript,0.85,False,medium,2025-05-20 20:11:00.025666,pending
+"
+public class StringUtils {
+    public static boolean isPalindrome(String str) {
+        if (str == null) return false;
+        str = str.toLowerCase().replaceAll(""[^a-z0-9]"", """");
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
+            ",java,0.88,False,medium,2025-05-20 20:11:00.025666,pending
+"
+def validate_password(password):
+    if len(password) < 8:
+        return False
+    has_upper = any(c.isupper() for c in password)
+    has_lower = any(c.islower() for c in password)
+    has_digit = any(c.isdigit() for c in password)
+    return has_upper and has_lower and has_digit
+            ",python,0.82,False,low,2025-05-20 20:11:00.025666,pending
+"
+class Queue {
+    constructor() {
+        this.items = [];
+    }
+    
+    enqueue(item) {
+        this.items.push(item);
+    }
+    
+    dequeue() {
+        if (this.isEmpty()) {
+            throw new Error(""Queue is empty"");
+        }
+        return this.items.shift();
+    }
+    
+    isEmpty() {
+        return this.items.length === 0;
+    }
+}
+            ",javascript,0.87,False,low,2025-05-20 20:11:00.025666,pending

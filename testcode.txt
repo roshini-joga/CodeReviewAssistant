@@ -1,0 +1,24 @@
+def fibonacci(n):
+    """Return the first n Fibonacci numbers."""
+    sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+
+print(fibonacci(10))
+
+bug: 
+
+def divide(a, b):
+    return a / b
+
+print(divide(10, 0))  # This will cause a ZeroDivisionError
+
+review_results = {
+    "suggestions": [],
+    "quality_score": 0.0,
+    "potential_bugs": [],
+    "improvement_areas": []
+}
