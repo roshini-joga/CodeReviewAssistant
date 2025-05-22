@@ -1,4 +1,4 @@
-# AI Code Review Assistant
+# AI Code Review Assistant - CMPE 258
 
 An intelligent code review system that leverages Large Language Models (LLMs) to analyze code, suggest improvements, and detect potential bugs. Built with Streamlit for a simple and intuitive user interface.
 
