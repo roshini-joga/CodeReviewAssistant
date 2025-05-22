@@ -1,0 +1,653 @@
+code,language,quality_score,has_bugs,complexity,timestamp,review_status,has_bugs_num,complexity_high,complexity_low,complexity_medium
+"#include <stdio.h>
+#include <stdlib.h>
+int* create_array(int size) {
+    int* arr = malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 2;
+    }
+    return arr;
+}",c,81.1,False,medium,2025-05-21T07:54:43.853971,approved,1,0,0,1
+"function debounce(func, delay) {
+    let timeout;
+    return function() {
+        const context = this;
+        const args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), delay);
+    };
+}",javascript,85.29,False,medium,2025-05-21T07:54:43.854043,approved,0,0,0,1
+"public class BankAccount {
+    private double balance;
+    public BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) balance -= amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}",java,89.41,False,medium,2025-05-21T07:54:43.854026,approved,0,0,0,1
+"async function fetchUserData(userId) {
+    try {
+        let response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}",javascript,79.6,False,high,2025-05-21T07:54:43.854010,approved,0,1,0,0
+"int arr[2];
+arr[2] = 5;",c,76.39,True,medium,2025-05-21T07:52:45.326381,pending,1,0,0,1
+"
+function sortArray(arr) {
+    return arr.sort((a, b) => a - b);
+}
+
+function findMedian(arr) {
+    const sorted = sortArray(arr);
+    const mid = Math.floor(sorted.length / 2);
+    return sorted.length % 2 === 0 
+        ? (sorted[mid-1] + sorted[mid]) / 2 
+        : sorted[mid];
+}
+            ",javascript,80.16,False,medium,11:00.0,pending,0,0,0,1
+"import java.util.*;
+public class StudentGrades {
+    public static void main(String[] args) {
+        Map<String, Integer> grades = new HashMap<>();
+        grades.put(""Alice"", 85);
+        grades.put(""Bob"", 92);
+        grades.forEach((name, grade) -> System.out.println(name + "": "" + grade));
+    }
+}",java,80.83,False,high,2025-05-21T07:54:43.854015,approved,0,1,0,0
+"int[] arr = new int[3];
+System.out.println(arr[3]);",java,85.66,True,high,2025-05-21T07:52:45.325692,pending,1,1,0,0
+"char s[5];
+strcpy(s, ""overflow"");",c,82.74,True,high,2025-05-21T07:52:45.327429,pending,1,1,0,0
+for(int i = 0; i < 10; i--){ System.out.println(i); },java,81.23,True,medium,2025-05-21T07:52:45.326321,pending,1,0,0,1
+"def parse_log_file(filepath):
+    error_count = 0
+    try:
+        with open(filepath, 'r') as file:
+            for line in file:
+                if 'ERROR' in line:
+                    error_count += 1
+    except FileNotFoundError:
+        print(f'{filepath} not found')
+    return error_count",python,83.26,False,high,2025-05-21T07:54:43.853947,approved,1,1,0,0
+"x = [1, 2, 3]
+print(x[3])",python,80.76,True,high,2025-05-21T07:52:45.325417,pending,1,1,0,0
+"x = [1, 2, 3]
+print(x[3])",python,75.8,True,high,2025-05-21T07:52:45.327337,pending,1,1,0,0
+"#include<stdio.h>
+int main() {
+ int a;
+ printf(""%d"", a);
+ return 0;
+}",c,90.58,True,medium,2025-05-21T07:52:45.328361,pending,1,0,0,1
+"#include<stdio.h>
+int main() {
+ int a;
+ printf(""%d"", a);
+ return 0;
+}",c,81.71,True,medium,2025-05-21T07:52:45.325483,pending,1,0,0,1
+"#include<stdio.h>
+int main() {
+ int a;
+ printf(""%d"", a);
+ return 0;
+}",c,77.75,True,high,2025-05-21T07:52:45.327349,pending,1,1,0,0
+"for i in range(10):
+print(i)",python,80.74,True,medium,2025-05-21T07:52:45.328230,pending,1,0,0,1
+"const x = 10;
+x = 20;",javascript,82.18,True,high,2025-05-21T07:52:45.328342,pending,1,1,0,0
+"import requests
+
+def fetch_weather(city):
+    api_key = 'your_api_key'
+    url = f'http://api.weatherapi.com/v1/current.json?key={api_key}&q={city}'
+    try:
+        response = requests.get(url)
+        data = response.json()
+        return data['current']['temp_c']
+    except Exception as e:
+        print(f'Error: {e}')
+        return None",python,74.16,False,high,2025-05-21T07:54:43.854076,approved,0,1,0,0
+"
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+    
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+    
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException(""Division by zero"");
+        }
+        return (double) a / b;
+    }
+}
+            ",java,81.54,False,low,11:00.0,pending,0,0,1,0
+"char s[5];
+strcpy(s, ""overflow"");",c,79.73,True,medium,2025-05-21T07:52:45.327301,pending,1,0,0,1
+"#include <stdio.h>
+#include <stdlib.h>
+int* create_array(int size) {
+    int* arr = malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 2;
+    }
+    return arr;
+}",c,84.17,False,high,2025-05-21T07:54:43.853877,approved,0,1,0,0
+"function greet(name) {
+  alert('Hello ' + Name);
+}",javascript,89.06,True,high,2025-05-21T07:52:45.328479,pending,1,1,0,0
+"#include <stdio.h>
+#include <stdlib.h>
+int* create_array(int size) {
+    int* arr = malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 2;
+    }
+    return arr;
+}",c,77.95,False,high,2025-05-21T07:54:43.853940,approved,0,1,0,0
+"function debounce(func, delay) {
+    let timeout;
+    return function() {
+        const context = this;
+        const args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), delay);
+    };
+}",javascript,78.37,False,high,2025-05-21T07:54:43.853954,approved,0,1,0,0
+"int[] arr = new int[3];
+System.out.println(arr[3]);",java,80.69,True,medium,2025-05-21T07:52:45.325755,pending,1,0,0,1
+"const x = 10;
+x = 20;",javascript,84.35,True,high,2025-05-21T07:52:45.326386,pending,1,1,0,0
+"String s = null;
+System.out.println(s.length());",java,82.23,True,high,2025-05-21T07:52:45.328104,pending,1,1,0,0
+int x = 10 / 0;,java,80.66,True,high,2025-05-21T07:52:45.328463,pending,1,1,0,0
+"import java.util.*;
+public class StudentGrades {
+    public static void main(String[] args) {
+        Map<String, Integer> grades = new HashMap<>();
+        grades.put(""Alice"", 85);
+        grades.put(""Bob"", 92);
+        grades.forEach((name, grade) -> System.out.println(name + "": "" + grade));
+    }
+}",java,76.35,False,medium,2025-05-21T07:54:43.853960,approved,0,0,0,1
+for(int i = 0; i < 10; i--){ System.out.println(i); },java,83.11,True,medium,2025-05-21T07:52:45.327924,pending,1,0,0,1
+"import java.util.*;
+public class StudentGrades {
+    public static void main(String[] args) {
+        Map<String, Integer> grades = new HashMap<>();
+        grades.put(""Alice"", 85);
+        grades.put(""Bob"", 92);
+        grades.forEach((name, grade) -> System.out.println(name + "": "" + grade));
+    }
+}",java,83.99,False,high,2025-05-21T07:54:43.853761,approved,0,1,0,0
+"import java.util.*;
+public class StudentGrades {
+    public static void main(String[] args) {
+        Map<String, Integer> grades = new HashMap<>();
+        grades.put(""Alice"", 85);
+        grades.put(""Bob"", 92);
+        grades.forEach((name, grade) -> System.out.println(name + "": "" + grade));
+    }
+}",java,81.95,False,high,2025-05-21T07:54:43.854032,approved,0,1,0,0
+"for i in range(10):
+print(i)",python,78.72,True,high,2025-05-21T07:52:45.327588,pending,0,1,0,0
+for(int i = 0; i < 10; i--){ System.out.println(i); },java,78.44,True,medium,2025-05-21T07:52:45.327880,pending,1,0,0,1
+"
+def calculate_factorial(n):
+    if n < 0:
+        return None
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+            ",python,84.95,False,low,11:00.0,pending,0,0,1,0
+"char s[5];
+strcpy(s, ""overflow"");",c,79.28,True,medium,2025-05-21T07:52:45.327496,pending,1,0,0,1
+"def divide(a, b):
+    return a / b",python,81.35,True,medium,2025-05-21T07:52:45.325832,pending,1,0,0,1
+"function greet(name) {
+  alert('Hello ' + Name);
+}",javascript,86.01,True,medium,2025-05-21T07:52:45.325489,pending,1,0,0,1
+"int main() {
+ char *p = NULL;
+ *p = 'a';
+ return 0;
+}",c,85.82,True,medium,2025-05-21T07:52:45.328209,pending,1,0,0,1
+"def divide(a, b):
+    return a / b",python,91.26,True,high,2025-05-21T07:52:45.328271,pending,1,1,0,0
+"async function fetchUserData(userId) {
+    try {
+        let response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}",javascript,85.07,False,medium,2025-05-21T07:54:43.853852,approved,0,0,0,1
+"int main() {
+ char *p = NULL;
+ *p = 'a';
+ return 0;
+}",c,83.21,True,high,2025-05-21T07:52:45.326332,pending,0,1,0,0
+int x = 10 / 0;,java,81.86,True,medium,2025-05-21T07:52:45.326340,pending,1,0,0,1
+"public class BankAccount {
+    private double balance;
+    public BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) balance -= amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}",java,81.45,False,high,2025-05-21T07:54:43.853786,approved,0,1,0,0
+"int main() {
+ char *p = NULL;
+ *p = 'a';
+ return 0;
+}",c,83.03,True,medium,2025-05-21T07:52:45.326256,pending,1,0,0,1
+"
+class Queue {
+    constructor() {
+        this.items = [];
+    }
+    
+    enqueue(item) {
+        this.items.push(item);
+    }
+    
+    dequeue() {
+        if (this.isEmpty()) {
+            throw new Error(""Queue is empty"");
+        }
+        return this.items.shift();
+    }
+    
+    isEmpty() {
+        return this.items.length === 0;
+    }
+}
+            ",javascript,74.95,False,low,11:00.0,pending,0,0,1,0
+"x = [1, 2, 3]
+print(x[3])",python,78.04,True,high,2025-05-21T07:52:45.327287,pending,1,1,0,0
+"int[] arr = new int[3];
+System.out.println(arr[3]);",java,91.85,True,high,2025-05-21T07:52:45.326305,pending,1,1,0,0
+"function greet(name) {
+  alert('Hello ' + Name);
+}",javascript,84.06,True,high,2025-05-21T07:52:45.328157,pending,1,1,0,0
+"int main() {
+ char *p = NULL;
+ *p = 'a';
+ return 0;
+}",c,84.24,True,medium,2025-05-21T07:52:45.328121,pending,1,0,0,1
+"x = [1, 2, 3]
+print(x[3])",python,84.61,True,medium,2025-05-21T07:52:45.328219,pending,1,0,0,1
+"let arr = [1, 2, 3];
+console.log(arr[3]);",javascript,95.0,True,high,2025-05-21T07:52:45.328168,pending,1,1,0,0
+"#include <stdio.h>
+#include <stdlib.h>
+int* create_array(int size) {
+    int* arr = malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 2;
+    }
+    return arr;
+}",c,81.06,False,medium,2025-05-21T07:54:43.853828,approved,0,0,0,1
+"for i in range(10):
+print(i)",python,77.33,True,medium,2025-05-21T07:52:45.326346,pending,1,0,0,1
+"function debounce(func, delay) {
+    let timeout;
+    return function() {
+        const context = this;
+        const args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), delay);
+    };
+}",javascript,77.77,False,high,2025-05-21T07:54:43.854037,approved,0,1,0,0
+"int main() {
+ char *p = NULL;
+ *p = 'a';
+ return 0;
+}",c,81.11,True,medium,2025-05-21T07:52:45.328018,pending,1,0,0,1
+"import java.util.*;
+public class StudentGrades {
+    public static void main(String[] args) {
+        Map<String, Integer> grades = new HashMap<>();
+        grades.put(""Alice"", 85);
+        grades.put(""Bob"", 92);
+        grades.forEach((name, grade) -> System.out.println(name + "": "" + grade));
+    }
+}",java,76.3,False,medium,2025-05-21T07:54:43.853982,approved,0,0,0,1
+"import java.util.*;
+public class StudentGrades {
+    public static void main(String[] args) {
+        Map<String, Integer> grades = new HashMap<>();
+        grades.put(""Alice"", 85);
+        grades.put(""Bob"", 92);
+        grades.forEach((name, grade) -> System.out.println(name + "": "" + grade));
+    }
+}",java,81.06,False,medium,2025-05-21T07:54:43.853817,approved,0,0,0,1
+"async function fetchUserData(userId) {
+    try {
+        let response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}",javascript,76.69,False,medium,2025-05-21T07:54:43.854087,approved,0,0,0,1
+"def parse_log_file(filepath):
+    error_count = 0
+    try:
+        with open(filepath, 'r') as file:
+            for line in file:
+                if 'ERROR' in line:
+                    error_count += 1
+    except FileNotFoundError:
+        print(f'{filepath} not found')
+    return error_count",python,82.97,False,high,2025-05-21T07:54:43.853897,approved,0,1,0,0
+"let arr = [1, 2, 3];
+console.log(arr[3]);",javascript,81.86,True,medium,2025-05-21T07:52:45.325530,pending,1,0,0,1
+"public class BankAccount {
+    private double balance;
+    public BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) balance -= amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}",java,77.4,False,high,2025-05-21T07:54:43.853999,approved,0,1,0,0
+"
+public class StringUtils {
+    public static boolean isPalindrome(String str) {
+        if (str == null) return false;
+        str = str.toLowerCase().replaceAll(""[^a-z0-9]"", """");
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
+            ",java,86.23,False,medium,11:00.0,pending,0,0,0,1
+"function greet(name) {
+  alert('Hello ' + Name);
+}",javascript,80.8,True,medium,2025-05-21T07:52:45.325588,pending,1,0,0,1
+"import requests
+
+def fetch_weather(city):
+    api_key = 'your_api_key'
+    url = f'http://api.weatherapi.com/v1/current.json?key={api_key}&q={city}'
+    try:
+        response = requests.get(url)
+        data = response.json()
+        return data['current']['temp_c']
+    except Exception as e:
+        print(f'Error: {e}')
+        return None",python,79.75,False,high,2025-05-21T07:54:43.853929,approved,0,1,0,0
+"#include <stdio.h>
+#include <stdlib.h>
+int* create_array(int size) {
+    int* arr = malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 2;
+    }
+    return arr;
+}",c,82.79,False,high,2025-05-21T07:54:43.854097,approved,0,1,0,0
+"def parse_log_file(filepath):
+    error_count = 0
+    try:
+        with open(filepath, 'r') as file:
+            for line in file:
+                if 'ERROR' in line:
+                    error_count += 1
+    except FileNotFoundError:
+        print(f'{filepath} not found')
+    return error_count",python,75.1,False,high,2025-05-21T07:54:43.853913,approved,0,1,0,0
+"public class BankAccount {
+    private double balance;
+    public BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) balance -= amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}",java,80.14,False,medium,2025-05-21T07:54:43.853891,approved,0,0,0,1
+"let arr = [1, 2, 3];
+console.log(arr[3]);",javascript,79.39,True,medium,2025-05-21T07:52:45.328473,pending,0,0,0,1
+"#include <stdio.h>
+#include <stdlib.h>
+int* create_array(int size) {
+    int* arr = malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 2;
+    }
+    return arr;
+}",c,80.12,False,medium,2025-05-21T07:54:43.853864,approved,0,0,0,1
+"def parse_log_file(filepath):
+    error_count = 0
+    try:
+        with open(filepath, 'r') as file:
+            for line in file:
+                if 'ERROR' in line:
+                    error_count += 1
+    except FileNotFoundError:
+        print(f'{filepath} not found')
+    return error_count",python,83.5,False,high,2025-05-21T07:54:43.854004,approved,0,1,0,0
+"async function fetchUserData(userId) {
+    try {
+        let response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}",javascript,77.12,False,high,2025-05-21T07:54:43.854056,approved,0,1,0,0
+"import requests
+
+def fetch_weather(city):
+    api_key = 'your_api_key'
+    url = f'http://api.weatherapi.com/v1/current.json?key={api_key}&q={city}'
+    try:
+        response = requests.get(url)
+        data = response.json()
+        return data['current']['temp_c']
+    except Exception as e:
+        print(f'Error: {e}')
+        return None",python,82.44,False,high,2025-05-21T07:54:43.853993,approved,1,1,0,0
+"int arr[2];
+arr[2] = 5;",c,78.79,True,high,2025-05-21T07:52:45.325820,pending,1,1,0,0
+"async function fetchUserData(userId) {
+    try {
+        let response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}",javascript,87.86,False,high,2025-05-21T07:54:43.853965,approved,0,1,0,0
+"import java.util.*;
+public class StudentGrades {
+    public static void main(String[] args) {
+        Map<String, Integer> grades = new HashMap<>();
+        grades.put(""Alice"", 85);
+        grades.put(""Bob"", 92);
+        grades.forEach((name, grade) -> System.out.println(name + "": "" + grade));
+    }
+}",java,88.09,False,medium,2025-05-21T07:54:43.853807,approved,0,0,0,1
+"import java.util.*;
+public class StudentGrades {
+    public static void main(String[] args) {
+        Map<String, Integer> grades = new HashMap<>();
+        grades.put(""Alice"", 85);
+        grades.put(""Bob"", 92);
+        grades.forEach((name, grade) -> System.out.println(name + "": "" + grade));
+    }
+}",java,74.35,False,high,2025-05-21T07:54:43.853904,approved,1,1,0,0
+"def parse_log_file(filepath):
+    error_count = 0
+    try:
+        with open(filepath, 'r') as file:
+            for line in file:
+                if 'ERROR' in line:
+                    error_count += 1
+    except FileNotFoundError:
+        print(f'{filepath} not found')
+    return error_count",python,84.59,False,medium,2025-05-21T07:54:43.853797,approved,0,0,0,1
+int x = 10 / 0;,java,83.89,True,medium,2025-05-21T07:52:45.328030,pending,0,0,0,1
+"String s = null;
+System.out.println(s.length());",java,78.61,True,medium,2025-05-21T07:52:45.328041,pending,0,0,0,1
+"#include<stdio.h>
+int main() {
+ int a;
+ printf(""%d"", a);
+ return 0;
+}",c,77.22,True,high,2025-05-21T07:52:45.325465,pending,1,1,0,0
+"def parse_log_file(filepath):
+    error_count = 0
+    try:
+        with open(filepath, 'r') as file:
+            for line in file:
+                if 'ERROR' in line:
+                    error_count += 1
+    except FileNotFoundError:
+        print(f'{filepath} not found')
+    return error_count",python,79.82,False,high,2025-05-21T07:54:43.853987,approved,0,1,0,0
+"def read_file(file_path):
+    with open(file_path) as f:
+        return f.read()",python,85.25,True,high,2025-05-21T07:52:45.325471,pending,1,1,0,0
+"function greet(name) {
+  alert('Hello ' + Name);
+}",javascript,82.37,True,high,2025-05-21T07:52:45.325600,pending,1,1,0,0
+"int[] arr = new int[3];
+System.out.println(arr[3]);",java,87.23,True,medium,2025-05-21T07:52:45.327416,pending,1,0,0,1
+"#include <stdio.h>
+#include <stdlib.h>
+int* create_array(int size) {
+    int* arr = malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 2;
+    }
+    return arr;
+}",c,82.27,False,high,2025-05-21T07:54:43.853977,approved,0,1,0,0
+"async function fetchUserData(userId) {
+    try {
+        let response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}",javascript,79.59,False,high,2025-05-21T07:54:43.854021,approved,0,1,0,0
+"async function fetchUserData(userId) {
+    try {
+        let response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}",javascript,80.15,False,high,2025-05-21T07:54:43.853885,approved,0,1,0,0
+"function debounce(func, delay) {
+    let timeout;
+    return function() {
+        const context = this;
+        const args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), delay);
+    };
+}",javascript,82.84,False,high,2025-05-21T07:54:43.854066,approved,0,1,0,0
+"def divide(a, b):
+    return a / b",python,83.36,True,medium,2025-05-21T07:52:45.327913,pending,1,0,0,1
+"#include <stdio.h>
+#include <stdlib.h>
+int* create_array(int size) {
+    int* arr = malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 2;
+    }
+    return arr;
+}",c,88.32,False,high,2025-05-21T07:54:43.853838,approved,0,1,0,0
+"
+def validate_password(password):
+    if len(password) < 8:
+        return False
+    has_upper = any(c.isupper() for c in password)
+    has_lower = any(c.islower() for c in password)
+    has_digit = any(c.isdigit() for c in password)
+    return has_upper and has_lower and has_digit
+            ",python,83.37,False,low,11:00.0,pending,0,0,1,0
+for(int i = 0; i < 10; i--){ System.out.println(i); },java,85.46,True,high,2025-05-21T07:52:45.328451,pending,1,1,0,0
+"
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    
+    validateEmail() {
+        return this.email.includes('@');
+    }
+    
+    getInfo() {
+        return `${this.name} (${this.email})`;
+    }
+}
+            ",javascript,76.09,False,low,11:00.0,pending,1,0,1,0
+"
+def fibonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    fib = [0, 1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    return fib
+            ",python,79.12,False,medium,11:00.0,pending,0,0,0,1
