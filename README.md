@@ -2,6 +2,8 @@
 
 An intelligent code review system that leverages Large Language Models (LLMs) to analyze code, suggest improvements, and detect potential bugs. Built with Streamlit for a simple and intuitive user interface.
 
+<img width="1704" alt="Screenshot 2025-05-21 at 5 30 10 PM" src="https://github.com/user-attachments/assets/37101fa0-a9b8-48f5-a875-e7050700913c" />
+
 ## Features
 
 - 🤖 AI-powered code analysis and suggestions
@@ -49,7 +51,13 @@ The project can be integrated with MLOps tools:
 
 ## Team Members and Contributions
 
-[To be filled with team member information and their contributions]
+### Roshini Joga:
+- Led traditional ML pipeline, Preprocessing and feature engineering, documentation.
+### Shruti Goyal:
+- Led transformer model integration, tokenization, model comparison.
+### Siri Batchu:
+- Led Streamlit UI development, metrics visualization, API integration.
+### All members contributed to design, testing, and reporting.
 
 ## License
 
