@@ -16,6 +16,8 @@ An intelligent code review system that leverages Large Language Models (LLMs) to
 
 ## Demo Link: [Demo Video]()
 
+## Report Link: [Report](https://docs.google.com/document/d/12LdOG4tBRZiuAFuyZtEaxiuaHeb-L2yhnDVx8WcpP28/edit?tab=t.0)
+
 ## Setup Instructions
 
 1. Clone the repository
