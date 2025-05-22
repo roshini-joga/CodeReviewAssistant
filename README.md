@@ -12,6 +12,10 @@ An intelligent code review system that leverages Large Language Models (LLMs) to
 - 🧪 A/B testing of different prompt strategies
 - 📱 Simple and intuitive web interface
 
+## Presentation Link: [Slide Deck](https://sjsu0-my.sharepoint.com/:p:/g/personal/roshini_joga_sjsu_edu/EZ3T935EQmdLroHRvvFDY_wBvBZ7Ww4rOgqbnicZDENJwg?e=rsw5nw)
+
+## Demo Link: [Demo Video]()
+
 ## Setup Instructions
 
 1. Clone the repository
@@ -49,9 +53,9 @@ The project can be integrated with MLOps tools:
 - DVC for data versioning
 - Prometheus/Grafana for monitoring
 
-## Team Members and Contributions
+## Team Members and Contributions (Team Mavericks)
 
-### Roshini Joga:
+### Roshini Joga (Team Leader):
 - Led traditional ML pipeline, Preprocessing and feature engineering, documentation.
 ### Shruti Goyal:
 - Led transformer model integration, tokenization, model comparison.
